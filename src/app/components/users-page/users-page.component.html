@@ -1,0 +1,2 @@
+<p>users-page works!</p>
+<p *ngFor="let item of userService.getUsers() | async ">{{ item.id }}</p>
