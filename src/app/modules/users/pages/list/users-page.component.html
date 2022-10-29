@@ -6,18 +6,10 @@
 </div>
 <ng-template #elseBlock>
     <div class="flex flex-col max-w-full gap-3 animate-pulse ">
-
+        <skeleton-title></skeleton-title>
         <div class="h-6 max-w-[240px] rounded-md bg-gray-300 mb-2"></div>
         <div class="flex flex-col gap-3">
-            <div class="h-4 rounded-md bg-gray-300 max-w-[480px]"></div>
-            <div class="h-4 rounded-md bg-gray-300 max-w-[480px]"></div>
-            <div class="h-4 rounded-md bg-gray-300 max-w-[480px]"></div>
-            <div class="h-4 rounded-md bg-gray-300 max-w-[480px]"></div>
-            <div class="h-4 rounded-md bg-gray-300 max-w-[480px]"></div>
-            <div class="h-4 rounded-md bg-gray-300 max-w-[480px]"></div>
-            <div class="h-4 rounded-md bg-gray-300 max-w-[480px]"></div>
-            <div class="h-4 rounded-md bg-gray-300 max-w-[480px]"></div>
-            <div class="h-4 rounded-md bg-gray-300 max-w-[480px]"></div>
+            <skeleton-string *ngFor="let i of [1,2,3,4,5,6,7,8, 9,10]"></skeleton-string>
         </div>
     </div>
 

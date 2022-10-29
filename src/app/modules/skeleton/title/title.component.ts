@@ -1,15 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-title',
+  selector: 'skeleton-title',
   templateUrl: './title.component.html',
-  styleUrls: ['./title.component.scss']
+  styleUrls: ['./title.component.scss'],
 })
-export class TitleComponent implements OnInit {
+export class TitleSkeleton implements OnInit {
+  constructor() {}
 
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
+  ngOnInit(): void {}
 }

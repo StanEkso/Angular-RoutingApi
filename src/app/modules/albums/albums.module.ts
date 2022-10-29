@@ -8,6 +8,7 @@ import { AlbumsPageComponent } from './pages/albums-page/albums-page.component';
 import { AlbumComponent } from './pages/album/album.component';
 import { PhotoListComponent } from './components/photo-list/photo-list.component';
 import { PhotoCardComponent } from './components/photo-card/photo-card.component';
+import { SkeletonModule } from '../skeleton/skeleton.module';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { PhotoCardComponent } from './components/photo-card/photo-card.component
     PhotoListComponent,
     PhotoCardComponent,
   ],
-  imports: [CommonModule, AlbumsRoutingModule, RouterModule],
+  imports: [CommonModule, AlbumsRoutingModule, RouterModule, SkeletonModule],
+  exports: [AlbumListComponent],
 })
 export class AlbumsModule {}

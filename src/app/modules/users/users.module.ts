@@ -6,6 +6,8 @@ import { UsersPageComponent } from './pages/list/users-page.component';
 import { RouterModule } from '@angular/router';
 import { UserPageComponent } from './pages/user/user-page.component';
 import { UserCardComponent } from './components/card/user-card.component';
+import { SkeletonModule } from '../skeleton/skeleton.module';
+import { AlbumsModule } from '../albums/albums.module';
 
 @NgModule({
   declarations: [
@@ -14,6 +16,12 @@ import { UserCardComponent } from './components/card/user-card.component';
     UserPageComponent,
     UserCardComponent,
   ],
-  imports: [CommonModule, UsersRoutingModule, RouterModule],
+  imports: [
+    CommonModule,
+    UsersRoutingModule,
+    RouterModule,
+    SkeletonModule,
+    AlbumsModule,
+  ],
 })
 export class UsersModule {}

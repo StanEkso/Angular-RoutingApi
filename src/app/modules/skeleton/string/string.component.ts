@@ -1,15 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-string',
+  selector: 'skeleton-string',
   templateUrl: './string.component.html',
-  styleUrls: ['./string.component.scss']
+  styleUrls: ['./string.component.scss'],
 })
-export class StringComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
+export class StringSkeleton implements OnInit {
+  constructor() {}
+  ngOnInit(): void {}
 }

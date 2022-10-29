@@ -1,15 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-image',
+  selector: 'skeleton-image',
   templateUrl: './image.component.html',
-  styleUrls: ['./image.component.scss']
+  styleUrls: ['./image.component.scss'],
 })
-export class ImageComponent implements OnInit {
+export class ImageSkeleton implements OnInit {
+  constructor() {}
 
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
+  ngOnInit(): void {}
 }
