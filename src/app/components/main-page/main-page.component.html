@@ -1,1 +1,15 @@
-<p>main-page works!</p>
+<div>
+    <h1 class="text-4xl font-bold my-4 text-center">Welcome here!</h1>
+    <p class="text-center text-2xl mb-4">What you do wanna do?</p>
+    <div class="flex gap-x-8 gap-y-4 flex-wrap justify-center">
+        <a [routerLink]="['/users']" routerLinkActive="router-link-active"
+            class="rounded-sm border-2 p-3 my-2 hover:border-blue-500 cursor-pointer">
+            Check users
+        </a>
+        <a [routerLink]="['/albums']" routerLinkActive="router-link-active"
+            class="rounded-sm border-2 p-3 my-2 hover:border-blue-500 cursor-pointer">
+            Check albums
+        </a>
+
+    </div>
+</div>
