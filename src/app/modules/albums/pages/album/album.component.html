@@ -1,1 +1,6 @@
-<p>album works!</p>
+<div class="" *ngIf="album$ | async as album">
+    <h3 class="font-bold mb-2 text-2xl">
+        {{ album.title }}
+    </h3>
+    <app-photo-list *ngIf="photos$ | async as photos" [photos]="photos"></app-photo-list>
+</div>

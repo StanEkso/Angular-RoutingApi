@@ -1,5 +1,1 @@
-<p>albums-page works!</p>
-<div *ngFor="let item of albums$ | async" class="flex space-x-4 items-center hover:text-blue-600 hover:underline my-3">
-    <img src="https://cdn-icons-png.flaticon.com/512/1160/1160358.png" class="w-6 h-6" alt="" />
-    <a [routerLink]="'/albums/' + item.id" routerLinkActive="router-link-active">{{ item.title }} </a>
-</div>
+<app-album-list *ngIf="albums$ | async as albums" [albums]="albums"></app-album-list>

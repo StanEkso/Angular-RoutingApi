@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Album } from 'src/app/models/album';
+import { Album } from '../../models/album';
 
 @Component({
   selector: 'app-album-list',

@@ -8,6 +8,7 @@ import { MainPageComponent } from './components/main-page/main-page.component';
 import { HttpClientModule } from '@angular/common/http';
 import { NotFoundPageComponent } from './components/not-found-page/not-found-page.component';
 import { UsersModule } from './modules/users/users.module';
+import { AlbumsModule } from './modules/albums/albums.module';
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,6 +20,7 @@ import { UsersModule } from './modules/users/users.module';
     BrowserModule,
     AppRoutingModule,
     UsersModule,
+    AlbumsModule,
     ReactiveFormsModule,
     FormsModule,
     HttpClientModule,
