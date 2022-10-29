@@ -22,6 +22,13 @@ const routes: Routes = [
           ),
       },
       {
+        path: 'albums',
+        loadChildren: () =>
+          import('./modules/albums/albums-routing.module').then(
+            (m) => m.AlbumsRoutingModule
+          ),
+      },
+      {
         path: '**',
         redirectTo: '404',
       },

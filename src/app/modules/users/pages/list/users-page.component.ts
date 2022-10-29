@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable, tap } from 'rxjs';
-import { User } from 'src/app/models/user';
-import { UsersService } from 'src/app/services/users.service';
+import { User } from '../../models/user';
+import { UsersService } from '../../services/users/users.service';
 
 @Component({
   selector: 'app-users-page',

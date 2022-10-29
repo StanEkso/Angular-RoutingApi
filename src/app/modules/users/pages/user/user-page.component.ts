@@ -1,10 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Observable, tap } from 'rxjs';
-import { Album } from 'src/app/models/album';
-import { User } from 'src/app/models/user';
-import { AlbumsService } from 'src/app/services/albums.service';
-import { UsersService } from 'src/app/services/users.service';
+import { Album } from 'src/app/modules/albums/models/album';
+import { AlbumsService } from '../../../albums/services/albums/albums.service';
+import { User } from '../../models/user';
+import { UsersService } from '../../services/users/users.service';
 
 @Component({
   selector: 'app-user-page',

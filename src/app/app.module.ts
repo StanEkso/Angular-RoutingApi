@@ -7,7 +7,6 @@ import { LayoutComponent } from './components/layout/layout.component';
 import { MainPageComponent } from './components/main-page/main-page.component';
 import { HttpClientModule } from '@angular/common/http';
 import { NotFoundPageComponent } from './components/not-found-page/not-found-page.component';
-import { AlbumListComponent } from './components/album-list/album-list.component';
 import { UsersModule } from './modules/users/users.module';
 @NgModule({
   declarations: [
@@ -15,7 +14,6 @@ import { UsersModule } from './modules/users/users.module';
     LayoutComponent,
     MainPageComponent,
     NotFoundPageComponent,
-    AlbumListComponent,
   ],
   imports: [
     BrowserModule,
