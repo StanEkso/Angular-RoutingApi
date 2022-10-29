@@ -1,0 +1,9 @@
+<div>
+    <h3 class="font-bold mb-2 text-2xl">Albums</h3>
+    <div class="" *ngFor="let item of albums">
+        <div class="flex space-x-4 items-center hover:text-blue-600 hover:underline my-3">
+            <img src="https://cdn-icons-png.flaticon.com/512/1160/1160358.png" class="w-6 h-6" alt="" />
+            <a [routerLink]="['/albums' + item.id]" routerLinkActive="router-link-active">{{ item.title }} </a>
+        </div>
+    </div>
+</div>

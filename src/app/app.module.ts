@@ -7,12 +7,20 @@ import { LayoutComponent } from './components/layout/layout.component';
 import { MainPageComponent } from './components/main-page/main-page.component';
 import { UsersPageComponent } from './components/users-page/users-page.component';
 import { HttpClientModule } from '@angular/common/http';
+import { NotFoundPageComponent } from './components/not-found-page/not-found-page.component';
+import { UserPageComponent } from './components/user-page/user-page.component';
+import { UserCardComponent } from './components/user-card/user-card.component';
+import { AlbumListComponent } from './components/album-list/album-list.component';
 @NgModule({
   declarations: [
     AppComponent,
     LayoutComponent,
     MainPageComponent,
     UsersPageComponent,
+    NotFoundPageComponent,
+    UserPageComponent,
+    UserCardComponent,
+    AlbumListComponent,
   ],
   imports: [
     BrowserModule,
