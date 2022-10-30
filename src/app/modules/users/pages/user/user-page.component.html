@@ -2,21 +2,9 @@
     <app-user-card *ngIf="user$ | async as user; else: elseUser" [user]="user"></app-user-card>
     <app-album-list *ngIf="albums$ | async as albums; else: elseAlbums" [albums]="albums"></app-album-list>
     <ng-template #elseUser>
-        <div class="rounded-md p-4 border-2 flex flex-col gap-1">
-            <skeleton-title></skeleton-title>
-            <div class="flex gap-3 items-center" *ngFor="let item of [1,2,3,4]">
-                <skeleton-icon></skeleton-icon>
-                <skeleton-string></skeleton-string>
-            </div>
-        </div>
+        <skeleton-user-card></skeleton-user-card>
     </ng-template>
     <ng-template #elseAlbums>
-        <div class="">
-            <skeleton-title></skeleton-title>
-            <div class="flex flex-col gap-3">
-                <skeleton-string *ngFor="let item of [1,2,3,4,5,6,7,8,9,10]"></skeleton-string>
-            </div>
-
-        </div>
+        <skeleton-list [length]="10"></skeleton-list>
     </ng-template>
 </div>

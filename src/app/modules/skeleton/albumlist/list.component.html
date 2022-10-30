@@ -1,0 +1,13 @@
+<div class="flex flex-col max-w-full gap-3 animate-pulse">
+    <skeleton-title *ngIf="showTitle"></skeleton-title>
+    <div class="flex flex-col gap-3" [ngClass]="{
+        'grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4': grid
+    }">
+        <ng-content *ngFor="let item of array"></ng-content>
+        <div *ngFor="let item of array" class="flex gap-1 items-center">
+            <skeleton-icon *ngIf="showIcon"></skeleton-icon>
+            <skeleton-string></skeleton-string>
+        </div>
+    </div>
+
+</div>

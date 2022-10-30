@@ -1,6 +1,22 @@
-<div class="" *ngIf="album$ | async as album">
-    <h3 class="font-bold mb-2 text-2xl">
+<div class="">
+    <h3 class="font-bold mb-2 text-2xl" *ngIf="album$ | async as album; else: elseAlbumTitle">
         {{ album.title }}
     </h3>
-    <app-photo-list *ngIf="photos$ | async as photos" [photos]="photos"></app-photo-list>
+    <div class="flex gap-1 items-center">
+        <p>
+            Created by
+        </p>
+        <p *ngIf="user$ | async as user; else: elseUser">{{ user.name }} </p>
+    </div>
+    <app-photo-list *ngIf="photos$ | async as photos; else: elseAlbums" [photos]="photos"></app-photo-list>
 </div>
+
+<ng-template #elseAlbumTitle>
+    <skeleton-title class="animate-pulse"></skeleton-title>
+</ng-template>
+<ng-template #elseUser>
+    <skeleton-string class="animate-pulse"> </skeleton-string>
+</ng-template>
+<ng-template #elseAlbums>
+    <skeleton-photo-list [length]="20"></skeleton-photo-list>
+</ng-template>

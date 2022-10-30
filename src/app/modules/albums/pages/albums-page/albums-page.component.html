@@ -1,1 +1,6 @@
-<app-album-list *ngIf="albums$ | async as albums" [albums]="albums"></app-album-list>
+<app-album-list *ngIf="albums$ | async as albums; else: elseBlock" [albums]="albums"></app-album-list>
+
+<ng-template #elseBlock>
+    <skeleton-list [length]="25" [showTitle]="true" [showIcon]="true">
+    </skeleton-list>
+</ng-template>
