@@ -6,7 +6,8 @@
         <p>
             Created by
         </p>
-        <a *ngIf="user$ | async as user; else: elseUser" [routerLink]="['/users' + user.id]">{{ user.name }} </a>
+        <a *ngIf="user$ | async as user; else: elseUser" [routerLink]="['/users/' + user.id]" class="">{{ user.name }}
+        </a>
     </div>
     <app-photo-list *ngIf="photos$ | async as photos; else: elseAlbums" [photos]="photos"></app-photo-list>
 </div>
@@ -15,7 +16,7 @@
     <skeleton-title class="animate-pulse"></skeleton-title>
 </ng-template>
 <ng-template #elseUser>
-    <skeleton-string class="animate-pulse" max> </skeleton-string>
+    <skeleton-string class="animate-pulse max-w-[120px]"> </skeleton-string>
 </ng-template>
 <ng-template #elseAlbums>
     <skeleton-photo-list [length]="20"></skeleton-photo-list>
