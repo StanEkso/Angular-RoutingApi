@@ -9,7 +9,7 @@ import { UsersService } from '../../services/users/users.service';
 @Component({
   selector: 'app-user-page',
   templateUrl: './user-page.component.html',
-  styleUrls: ['./user-page.component.scss'],
+  styleUrls: [],
 })
 export class UserPageComponent implements OnInit {
   constructor(

@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'skeleton-image',
   templateUrl: './image.component.html',
-  styleUrls: ['./image.component.scss'],
+  styleUrls: [],
 })
 export class ImageSkeleton implements OnInit {
   constructor() {}

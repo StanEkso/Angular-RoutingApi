@@ -4,7 +4,7 @@ import { Album } from '../../models/album';
 @Component({
   selector: 'app-album-list',
   templateUrl: './album-list.component.html',
-  styleUrls: ['./album-list.component.scss'],
+  styleUrls: [],
 })
 export class AlbumListComponent implements OnInit {
   @Input() albums: Album[];

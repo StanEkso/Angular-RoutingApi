@@ -3,7 +3,7 @@ import { Component, Input, OnInit } from '@angular/core';
 @Component({
   selector: 'skeleton-list',
   templateUrl: './list.component.html',
-  styleUrls: ['./list.component.scss'],
+  styleUrls: [],
 })
 export class AlbumListSkeleton implements OnInit {
   @Input() length: number = 10;
@@ -14,6 +14,6 @@ export class AlbumListSkeleton implements OnInit {
   constructor() {}
 
   ngOnInit(): void {
-    this.array = new Array(this.length || 10);
+    this.array = new Array(this.length);
   }
 }

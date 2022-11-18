@@ -4,7 +4,7 @@ import { Photo } from '../../models/photo';
 @Component({
   selector: 'app-photo-card',
   templateUrl: './photo-card.component.html',
-  styleUrls: ['./photo-card.component.scss'],
+  styleUrls: [],
 })
 export class PhotoCardComponent implements OnInit {
   @Input() photo: Photo;

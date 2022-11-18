@@ -11,7 +11,7 @@ import { PhotosService } from '../../services/photo/albums.service';
 @Component({
   selector: 'app-album',
   templateUrl: './album.component.html',
-  styleUrls: ['./album.component.scss'],
+  styleUrls: [],
 })
 export class AlbumComponent implements OnInit {
   constructor(

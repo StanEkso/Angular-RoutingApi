@@ -6,7 +6,7 @@ import { AlbumsService } from '../../services/albums/albums.service';
 @Component({
   selector: 'app-albums-page',
   templateUrl: './albums-page.component.html',
-  styleUrls: ['./albums-page.component.scss'],
+  styleUrls: [],
 })
 export class AlbumsPageComponent implements OnInit {
   constructor(private albumsService: AlbumsService) {}
