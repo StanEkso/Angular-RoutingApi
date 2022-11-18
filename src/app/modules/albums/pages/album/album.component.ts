@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Observable, tap } from 'rxjs';
 import { User } from 'src/app/modules/users/models/user';
 import { UsersService } from 'src/app/modules/users/services/users/users.service';
@@ -18,17 +18,22 @@ export class AlbumComponent implements OnInit {
     private route: ActivatedRoute,
     private albumsService: AlbumsService,
     private photosService: PhotosService,
-    private userService: UsersService
+    private userService: UsersService,
+    private router: Router
   ) {}
   album$: Observable<Album>;
   photos$: Observable<Photo[]>;
   user$: Observable<User>;
   ngOnInit(): void {
-    console.log(this.albumsService);
     this.route.params.subscribe((values) => {
       this.album$ = this.albumsService.getById(values['id']);
-      this.album$.subscribe((value) => {
-        this.user$ = this.userService.getById(value.userId);
+      this.album$.subscribe({
+        next: (value) => {
+          this.user$ = this.userService.getById(value.userId);
+        },
+        error: () => {
+          this.router.navigate(['/404']);
+        },
       });
       this.photos$ = this.photosService.getByAlbumId(values['id']);
     });

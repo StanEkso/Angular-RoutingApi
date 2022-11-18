@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Observable, tap } from 'rxjs';
 import { Album } from 'src/app/modules/albums/models/album';
 import { AlbumsService } from '../../../albums/services/albums/albums.service';
@@ -15,7 +15,8 @@ export class UserPageComponent implements OnInit {
   constructor(
     private route: ActivatedRoute,
     private usersService: UsersService,
-    private albumService: AlbumsService
+    private albumService: AlbumsService,
+    private router: Router
   ) {}
   user$: Observable<User>;
   albums$: Observable<Album[]>;
@@ -23,9 +24,15 @@ export class UserPageComponent implements OnInit {
   ngOnInit(): void {
     this.loading = true;
     this.route.params.subscribe((values) => {
-      this.user$ = this.usersService
-        .getById(values['id'])
-        .pipe(tap(() => (this.loading = false)));
+      this.user$ = this.usersService.getById(values['id']);
+      this.user$.subscribe({
+        next: () => {
+          this.loading = false;
+        },
+        error: () => {
+          this.router.navigate(['/404']);
+        },
+      });
       this.albums$ = this.albumService.getByUserId(values['id']);
     });
   }
