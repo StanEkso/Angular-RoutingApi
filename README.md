@@ -1,27 +1,38 @@
-# NgTodo
+# Angular Routing
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.1.0.
+This project is example of "multi-page SPA" using Angular.
 
-## Development server
+Visit http://spa-lemon.vercel.app/ to checkout it by yourself.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Technologies
 
-## Code scaffolding
+- Angular 14.1
+- Angular Routing
+- Typescript
+- TailwindCSS for styling
+- https://jsonplaceholder.typicode.com as fake REST API.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Project Features
 
-## Build
+- Few Pages:
+  - Main Page with links to other
+  - Users Page
+  - Album Page
+- Page for every user/album and cross-links.
+- Skeletons for best UX:
+  - For lists: f.e. album list, user list and etc.
+  - For cards: f.e. user card, photo card
+  - Etc
+- App is works fine for many devices (320px-1920px)
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Local install
 
-## Running unit tests
+### Pre-requirements:
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+- Node and NPM installed on your device
 
-## Running end-to-end tests
+### Installation
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+- Clone this repository
+- Run `npm install` in cloned folder
+- Run `npm start` or `npm run start` to start project locally
