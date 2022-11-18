@@ -18,8 +18,6 @@
     <p></p>
     <p class="flex gap-2 items-center">
         <img src="https://cdn-icons-png.flaticon.com/512/2527/2527411.png" alt="Geoposition" class="h-4" />
-        <span>
-            {{ user.address.city }}, {{ user.address.street }}
-        </span>
+        {{ user.address.city }}, {{ user.address.street }}
     </p>
 </div>
