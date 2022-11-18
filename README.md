@@ -2,7 +2,7 @@
 
 This project is example of "multi-page SPA" using Angular.
 
-Visit http://spa-lemon.vercel.app/ to checkout it by yourself.
+Visit https://angularrouting.vercel.app to check it by yourself.
 
 ## Technologies
 
@@ -22,7 +22,7 @@ Visit http://spa-lemon.vercel.app/ to checkout it by yourself.
 - Skeletons for best UX:
   - For lists: f.e. album list, user list and etc.
   - For cards: f.e. user card, photo card
-  - Etc
+  - Etc.
 - App is works fine for many devices (320px-1920px)
 
 ## Local install
